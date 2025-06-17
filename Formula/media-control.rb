@@ -23,6 +23,23 @@ class MediaControl < Formula
   end
 
   test do
-    assert_equal "null", shell_output("#{bin}/media-control get").strip
+    output = shell_output("#{bin}/media-control get").strip
+    parsed = JSON.parse(output)
+    # The output is either null or a dictionary with the given keys.
+    if parsed.nil?
+    else
+      # Application bundle identifier
+      assert parsed.is_a?(Hash)
+      assert parsed.key?("bundleIdentifier")
+      assert parsed["bundleIdentifier"].is_a?(String)
+      assert !parsed["bundleIdentifier"].empty?
+      # Media playback state
+      assert parsed.key?("playing")
+      assert parsed["playing"].is_a?(TrueClass) || parsed["playing"].is_a?(FalseClass)
+      # Media title
+      assert parsed.key?("title")
+      assert parsed["title"].is_a?(String)
+      assert !parsed["title"].empty?
+    end
   end
 end
