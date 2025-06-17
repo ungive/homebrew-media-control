@@ -8,6 +8,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 VERSION=$1
+VERSION=${VERSION//v/}
 REPO="ungive/mediaremote-adapter"
 URL="https://github.com/${REPO}/archive/refs/tags/v${VERSION}.tar.gz"
 
