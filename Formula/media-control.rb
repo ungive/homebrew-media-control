@@ -25,7 +25,7 @@ class MediaControl < Formula
   test do
     output = shell_output("#{bin}/media-control get").strip
     parsed = JSON.parse(output)
-    # The output is either null or a dictionary with the given keys.
+    # The output is either null or a dictionary with at least the given keys.
     if parsed.nil?
     else
       # Application bundle identifier
