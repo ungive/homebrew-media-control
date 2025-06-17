@@ -1,8 +1,8 @@
 class MediaControl < Formula
   desc "Control and observe media playback from the command-line"
   homepage "https://github.com/ungive/mediaremote-adapter"
-  url "https://github.com/ungive/mediaremote-adapter/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "9a512ad33b66ca7e7d1cb9dc74cd4f3adf1c22a70569b12c284d84bfd79f3f30"
+  url "https://github.com/ungive/mediaremote-adapter/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   license "BSD-3-Clause"
   head "https://github.com/ungive/mediaremote-adapter.git", branch: "master"
 
