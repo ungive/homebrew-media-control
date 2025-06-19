@@ -9,10 +9,10 @@ fi
 
 VERSION=$1
 VERSION=${VERSION//v/}
-REPO="ungive/mediaremote-adapter"
+REPO="ungive/media-control"
 URL="https://github.com/${REPO}/archive/refs/tags/v${VERSION}.tar.gz"
 
 TEMPDIR=$(mktemp -d)
-curl -L -s "$URL" -o "$TEMPDIR/source.tar.gz"
+curl -fSsL "$URL" -o "$TEMPDIR/source.tar.gz"
 shasum -a 256 "$TEMPDIR/source.tar.gz" | awk '{ print $1 }'
 rm -rf "$TEMPDIR"
