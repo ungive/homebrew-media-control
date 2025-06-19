@@ -3,8 +3,8 @@ class MediaControl < Formula
   homepage "https://github.com/ungive/media-control"
   # pull from git tag to get submodules
   url "https://github.com/ungive/media-control.git",
-      tag:      "v0.3.0",
-      revision: "7d5a4ff244a8b4ba9e7b14112cc089e86e24b65e"
+      tag:      "v0.4.0",
+      revision: "df7e4469c4fa391d874cd095304e483acb54724e"
   license "BSD-3-Clause"
   head "https://github.com/ungive/media-control.git", branch: "master"
 
