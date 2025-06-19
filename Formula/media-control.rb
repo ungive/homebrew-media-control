@@ -29,6 +29,7 @@ class MediaControl < Formula
     parsed = JSON.parse(output)
     # The output is either null or a dictionary with at least the given keys.
     if parsed.nil?
+      # ok
     else
       # Application bundle identifier
       assert parsed.is_a?(Hash)
