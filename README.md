@@ -1,3 +1,7 @@
+> [!NOTE]
+> Archived. Now directly available on Homebrew:  
+> https://formulae.brew.sh/formula/media-control#default
+
 # media-control
 
 Control and observe media playback from the command line.
