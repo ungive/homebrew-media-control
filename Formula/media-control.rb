@@ -8,6 +8,8 @@ class MediaControl < Formula
   license "BSD-3-Clause"
   head "https://github.com/ungive/media-control.git", branch: "master"
 
+  deprecate! date: "2025-08-01", because: "is now an offical brew package", replacement_formula: "media-control"
+
   depends_on "cmake" => :build
   depends_on :macos
 
